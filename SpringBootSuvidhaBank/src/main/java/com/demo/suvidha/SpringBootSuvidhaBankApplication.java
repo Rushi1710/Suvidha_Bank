@@ -1,20 +1,13 @@
 package com.demo.suvidha;
 
-import java.util.Arrays;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
-import com.demo.suvidha.entity.Customer;
 import com.demo.suvidha.entity.Employee;
-import com.demo.suvidha.entity.Loan;
-import com.demo.suvidha.entity.collaterals;
 import com.demo.suvidha.repo.LoanRepository;
 import com.demo.suvidha.services.EmployeeService;
-
+//This is main class
 @SpringBootApplication
 public class SpringBootSuvidhaBankApplication {
 
