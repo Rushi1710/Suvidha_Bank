@@ -23,12 +23,14 @@ public class CustomerService
 		return optc.orElseThrow(() -> new EntityNotFoundException("Customer Not Found"));
 	}
 
-	public boolean insertCustomer(Customer customer) {
-		if (!this.customerRepository.existsById(customer.getCustomerIdentity())) {
+	public String insertCustomer(Customer customer) {
+		if (!this.customerRepository.existsById(customer.getCustomerIdentity())) 
+		{
+			System.out.println("services == "+customer);
 			this.customerRepository.save(customer);
-			return true;
+			return "Insert data";
 		}
-		return false;
+		return "Not Inserted";
 	}
 	
 }

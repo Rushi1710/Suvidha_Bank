@@ -38,7 +38,8 @@ public class CustomerController
 	}
 	
 	@PostMapping("/customer")
-	public boolean addCustomer(@RequestBody Customer customer) {
+	public String addCustomer(@RequestBody Customer customer) {
+		System.out.println(customer);
 		return this.customerService.insertCustomer(customer);
 	}
 	
@@ -47,6 +48,11 @@ public class CustomerController
 	public Customer getCustomerById(@PathVariable String id) {
 		System.out.println(id);
 	return this.customerService.findCustomerById(id);
+	}
+	
+	@GetMapping("/loan/{id}")
+	public Loan getCustometLoanById(@PathVariable String id) {
+	return this.loanService.findLoanById(id);
 	}
 	
 

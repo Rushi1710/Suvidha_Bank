@@ -41,7 +41,7 @@ public class EmployeeService {
 		if (this.searchByEmployeeId(empId)) 
 		{			
 			
-			List<Loan> loans=this.loanRepository.findByEmployeeEmployeeId(empId);
+			List<Loan> loans=this.loanRepository.searchEmply(empId);
 			System.out.println(loans);
 			if(loans.size()>0) {
 				for(Loan loan:loans) {

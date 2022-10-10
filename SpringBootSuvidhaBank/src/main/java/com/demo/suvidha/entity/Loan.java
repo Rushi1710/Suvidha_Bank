@@ -43,6 +43,7 @@ public class Loan
 	@JoinColumn(name = "employee_Id")
 	private Employee employee;
 	
+	@JsonIgnore
 	@Embedded
 	private List<collaterals> collaterals;
 
@@ -50,10 +51,8 @@ public class Loan
 	public String toString() {
 		return "Loan [loanId=" + loanId + ", loanType=" + loanType + ", loanAmount=" + loanAmount + ", interestRate="
 				+ interestRate + ", period=" + period + ", isApproved=" + isApproved + ", remarks=" + remarks
-				+ ", employee=" + employee + ", collaterals=" + collaterals + "]";
+				+ ", employee=" + employee + "]";
 	}
-	
-	
-	
+		
 	
 }

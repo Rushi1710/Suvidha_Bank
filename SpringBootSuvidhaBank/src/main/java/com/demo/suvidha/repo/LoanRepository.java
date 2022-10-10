@@ -16,6 +16,5 @@ public interface LoanRepository extends CrudRepository<Loan, String> {
 	@Query()
 	public boolean existsByCustomer(String customerId);
 
-	public List<Loan> findByEmployeeEmployeeId(String empId);
 
 }

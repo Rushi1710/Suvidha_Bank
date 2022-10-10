@@ -47,7 +47,7 @@ public class LoanService
 	}
 
 	public List<Loan> getLoanByEmployeeId(String empId) {
-		return this.loanRepository.findByEmployeeEmployeeId(empId);
+		return this.loanRepository.searchEmply(empId);
 	}
 
 	public Employee getEmployeeById(String empId) {
